@@ -42,7 +42,8 @@
     "lodash-es": "^4.17.21",
     "nanoid": "^5.1.5",
     "true-myth": "^8.5.0",
-    "type-fest": "^3.11.1"
+    "type-fest": "^3.11.1",
+    "tshy": "^1.14.0"
   },
   "peerDependencies": {
     "@tiptap/core": "^2.0.0-beta.176",
@@ -73,7 +74,6 @@
     "mixpanel": "^0.17.0",
     "pino": "^8.7.0",
     "pino-http": "^8.0.0",
-    "tshy": "^1.14.0",
     "typescript": "^4.5.4",
     "ua-parser-js": "^1.0.38",
     "vitest": "^3.0.7",
