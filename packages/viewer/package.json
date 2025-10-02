@@ -38,6 +38,7 @@
     "lint:tsc": "tsc --noEmit",
     "lint": "yarn lint:js && yarn lint:tsc",
     "lint:ci": "yarn lint:tsc",
+    "postinstall": "node ./scripts/ensure-built.mjs",
     "test": "vitest",
     "test:ui": "vitest --ui",
     "test:run": "vitest run"
@@ -65,15 +66,20 @@
     "three-mesh-bvh": "0.5.17",
     "tree-model": "1.0.7",
     "troika-three-text": "0.52.4",
-    "type-fest": "^4.15.0"
+    "type-fest": "^4.15.0",
+    "rollup": "^2.70.1",
+    "rollup-plugin-delete": "^2.0.0",
+    "rollup-plugin-terser": "^7.0.2",
+    "rollup-plugin-typescript2": "^0.36.0",
+    "@rollup/plugin-babel": "^5.3.1",
+    "@rollup/plugin-image": "^3.0.2",
+    "@rollup/plugin-typescript": "^11.1.6",
+    "typescript": "^4.5.4"
   },
   "devDependencies": {
     "@babel/core": "^7.18.2",
     "@babel/eslint-parser": "^7.18.2",
     "@babel/preset-env": "^7.20.2",
-    "@rollup/plugin-babel": "^5.3.1",
-    "@rollup/plugin-image": "^3.0.2",
-    "@rollup/plugin-typescript": "^11.1.6",
     "@types/babel__core": "^7.20.1",
     "@types/earcut": "3.0.0",
     "@types/lodash-es": "4.17.12",
@@ -88,11 +94,6 @@
     "jsdom": "^24.0.0",
     "prettier": "^2.5.1",
     "regenerator-runtime": "^0.13.7",
-    "rollup": "^2.70.1",
-    "rollup-plugin-delete": "^2.0.0",
-    "rollup-plugin-terser": "^7.0.2",
-    "rollup-plugin-typescript2": "^0.36.0",
-    "typescript": "^4.5.4",
     "vitest": "^1.4.0"
   },
   "gitHead": "5627e490f9a3ecadf19cc4686ad15f344d9ad2d3"
