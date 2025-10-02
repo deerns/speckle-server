@@ -5,7 +5,7 @@
   "private": true,
   "scripts": {
   "build": "NODE_OPTIONS=--max-old-space-size=8192 nuxt build",
-  "prebuild": "yarn workspaces focus @speckle/tailwind-theme @speckle/ui-components @speckle/viewer --production && yarn workspace @speckle/tailwind-theme build && yarn workspace @speckle/shared build && yarn workspace @speckle/ui-components build && yarn workspace @speckle/viewer build",
+  "prebuild": "yarn workspaces focus @speckle/tailwind-theme @speckle/ui-components @speckle/objectloader2 @speckle/viewer --production && yarn workspace @speckle/tailwind-theme build && yarn workspace @speckle/shared build && yarn workspace @speckle/ui-components build && yarn workspace @speckle/objectloader2 build && yarn workspace @speckle/viewer build",
     "build:prod": "NODE_ENV=production yarn build",
     "build:postinstall": "nuxt prepare",
     "build:sourcemaps": "BUILD_SOURCEMAPS=true yarn build",
