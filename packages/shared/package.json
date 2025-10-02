@@ -15,6 +15,7 @@
     "build": "NODE_ENV=production tshy",
     "dev": "tshy --watch",
     "prepack": "yarn build",
+    "postinstall": "node ./scripts/ensure-built.mjs",
     "lint:eslint": "eslint .",
     "lint:tsc": "tsc --noEmit",
     "lint": "yarn lint:eslint && yarn lint:tsc",
