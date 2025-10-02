@@ -14,8 +14,9 @@ if (existsSync(distEntry)) {
   process.exit(0)
 }
 
-console.log('[shared] dist missing, running build')
-const result = spawnSync(process.execPath, ['../node_modules/.bin/tshy'], {
+console.log('[shared] dist missing, running build via yarn script')
+// Use Yarn to run the declared build script so it works under PnP (no node_modules/.bin)
+const result = spawnSync('yarn', ['run', 'build'], {
   cwd: root,
   stdio: 'inherit',
   env: { ...process.env, NODE_ENV: 'production' }
