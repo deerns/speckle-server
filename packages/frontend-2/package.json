@@ -5,7 +5,7 @@
   "private": true,
   "scripts": {
   "build": "NODE_OPTIONS=--max-old-space-size=8192 nuxt build",
-  "prebuild": "yarn workspace @speckle/shared build",
+  "prebuild": "yarn workspaces focus @speckle/ui-components --production && yarn workspace @speckle/shared build && yarn workspace @speckle/ui-components build",
     "build:prod": "NODE_ENV=production yarn build",
     "build:postinstall": "nuxt prepare",
     "build:sourcemaps": "BUILD_SOURCEMAPS=true yarn build",
